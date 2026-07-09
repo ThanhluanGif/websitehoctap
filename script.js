@@ -44,7 +44,9 @@ const lessons = [
       "HTML, CSS, JavaScript làm việc với nhau ra sao?",
       "Cấu trúc file HTML đầu tiên.",
       "Demo: tạo trang giới thiệu bản thân."
-    ]
+    ],
+    deckUrl: "https://docs.google.com/presentation/d/1FYNRnHmBGCzQC68DisM00XM1vcqF8IvC-i5EWfw5eZE/edit?usp=sharing",
+    embedUrl: "https://docs.google.com/presentation/d/1FYNRnHmBGCzQC68DisM00XM1vcqF8IvC-i5EWfw5eZE/embed?start=false&loop=false&delayms=3000"
   },
   {
     title: "Tổ chức nội dung với HTML semantic, danh sách, bảng và form",
@@ -591,6 +593,11 @@ const lessonCount = document.querySelector("#lessonCount");
 const progressFill = document.querySelector("#progressFill");
 const slideGrid = document.querySelector("#slideGrid");
 const exerciseList = document.querySelector("#exerciseList");
+const slideKicker = document.querySelector("#slideKicker");
+const slideTitle = document.querySelector("#slideTitle");
+const slideFrame = document.querySelector("#slideFrame");
+const slideEmpty = document.querySelector("#slideEmpty");
+const slideDirectLink = document.querySelector("#slideDirectLink");
 
 function renderList(target, items) {
   target.innerHTML = items.map((item) => `<li>${item}</li>`).join("");
@@ -618,6 +625,29 @@ function renderLesson(index) {
   });
 }
 
+function renderSlideDeck(index) {
+  const lesson = lessons[index];
+  const hasDeck = Boolean(lesson.embedUrl);
+
+  slideKicker.textContent = `Slide bài ${index + 1}`;
+  slideTitle.textContent = lesson.title;
+  slideEmpty.hidden = hasDeck;
+  slideFrame.hidden = !hasDeck;
+  slideDirectLink.hidden = !hasDeck;
+
+  if (hasDeck) {
+    slideFrame.src = lesson.embedUrl;
+    slideDirectLink.href = lesson.deckUrl || lesson.embedUrl;
+  } else {
+    slideFrame.removeAttribute("src");
+    slideDirectLink.removeAttribute("href");
+  }
+
+  document.querySelectorAll(".slide-card").forEach((card, cardIndex) => {
+    card.classList.toggle("active", cardIndex === index);
+  });
+}
+
 lessons.forEach((lesson, index) => {
   const button = document.createElement("button");
   button.className = "lesson-tab";
@@ -635,8 +665,17 @@ slideGrid.innerHTML = lessons.map((lesson, index) => `
     <ol>
       ${lesson.slides.map((item) => `<li>${item}</li>`).join("")}
     </ol>
+    ${lesson.embedUrl ? `<button class="slide-select" type="button" data-slide-index="${index}">Xuất slide lên khung trình chiếu</button>` : `<span class="slide-note">Chưa gắn file slide</span>`}
   </article>
 `).join("");
+
+document.querySelectorAll("[data-slide-index]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const index = Number(button.dataset.slideIndex);
+    renderSlideDeck(index);
+    document.querySelector("#slides").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+});
 
 exerciseList.innerHTML = lessons.map((lesson, index) => `
   <article class="exercise-item">
@@ -651,3 +690,4 @@ exerciseList.innerHTML = lessons.map((lesson, index) => `
 `).join("");
 
 renderLesson(0);
+renderSlideDeck(0);

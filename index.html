@@ -186,8 +186,24 @@
     <section id="slides" class="section-band">
       <div class="section-heading">
         <p class="eyebrow">Slide gợi ý</p>
-        <h2>Khung slide cho từng buổi học</h2>
-        <p>Phần này dùng như dàn ý để giảng viên chuyển thành slide trình chiếu hoặc dùng trực tiếp khi dạy.</p>
+        <h2>Khu vực trình chiếu và khung slide từng buổi</h2>
+        <p>Slide bài học được hiển thị trực tiếp trên website. Các buổi chưa có slide sẽ hiển thị dàn ý để giảng viên tiếp tục biên soạn.</p>
+      </div>
+      <div class="slide-player" id="slidePlayer">
+        <div class="slide-player-header">
+          <div>
+            <p class="eyebrow" id="slideKicker">Slide bài 1</p>
+            <h3 id="slideTitle">Làm quen với Web, HTML cơ bản và môi trường làm việc</h3>
+          </div>
+          <a class="button secondary" id="slideDirectLink" href="#" target="_blank" rel="noopener">Mở trên Google Slides</a>
+        </div>
+        <div class="slide-frame-wrap">
+          <iframe id="slideFrame" title="Slide bài học" loading="lazy" allowfullscreen></iframe>
+          <div class="slide-empty" id="slideEmpty" hidden>
+            <strong>Chưa có slide trình chiếu cho buổi này.</strong>
+            <p>Giảng viên có thể dùng dàn ý bên dưới để tạo slide, sau đó thêm link vào dữ liệu bài học.</p>
+          </div>
+        </div>
       </div>
       <div class="slide-grid" id="slideGrid"></div>
     </section>
