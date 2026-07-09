@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giáo án HTML, CSS và GitHub - 12 buổi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Về đầu trang">
+      <span class="brand-mark">HC</span>
+      <span>
+        <strong>HTML CSS GitHub</strong>
+        <small>Chương trình 12 buổi</small>
+      </span>
+    </a>
+    <nav class="topnav" aria-label="Điều hướng chính">
+      <a href="#overview">Tổng quan</a>
+      <a href="#process">Quy trình</a>
+      <a href="#lessons">12 buổi</a>
+      <a href="#slides">Slide</a>
+      <a href="#exercises">Bài tập</a>
+      <a href="#rubric">Đánh giá</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Tài liệu đào tạo nội bộ</p>
+        <h1>Xây dựng website với HTML, CSS và GitHub</h1>
+        <p class="hero-text">Lộ trình 12 buổi cho học viên mới bắt đầu, triển khai theo dự án cá nhân hoặc landing page. Mỗi buổi học đều có mục tiêu, hoạt động lớp, bài tập, sản phẩm đầu ra và tiêu chí đánh giá rõ ràng.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#lessons">Xem lộ trình</a>
+          <a class="button secondary" href="giao_an_html_css_github_12_buoi.md">Mở giáo án Markdown</a>
+        </div>
+      </div>
+      <div class="hero-board" aria-label="Minh họa quy trình học theo dự án">
+        <div class="board-header">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="board-content">
+          <article>
+            <small>Tuần 1-4</small>
+            <strong>Nền tảng</strong>
+            <p>HTML, semantic, CSS cơ bản, box model.</p>
+          </article>
+          <article>
+            <small>Tuần 5-8</small>
+            <strong>Layout</strong>
+            <p>Flexbox, position, Grid, responsive.</p>
+          </article>
+          <article>
+            <small>Tuần 9-12</small>
+            <strong>Công bố</strong>
+            <p>Animation, GitHub, Pages, bảo vệ project.</p>
+          </article>
+          <pre>&lt;main class="portfolio"&gt;
+  &lt;section class="hero"&gt;...&lt;/section&gt;
+  &lt;section class="projects"&gt;...&lt;/section&gt;
+&lt;/main&gt;</pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="course-overview" aria-label="Thông tin học phần">
+      <article>
+        <span>Thời lượng</span>
+        <strong>12 buổi / 3 tháng</strong>
+      </article>
+      <article>
+        <span>Tần suất</span>
+        <strong>1 buổi mỗi tuần</strong>
+      </article>
+      <article>
+        <span>Hình thức</span>
+        <strong>Học theo dự án</strong>
+      </article>
+      <article>
+        <span>Sản phẩm</span>
+        <strong>Website responsive trên GitHub Pages</strong>
+      </article>
+    </section>
+
+    <section class="section-band">
+      <div class="section-heading">
+        <p class="eyebrow">Mô tả học phần</p>
+        <h2>Từ trang HTML đầu tiên đến một website có thể chia sẻ</h2>
+      </div>
+      <div class="two-column">
+        <article class="text-panel">
+          <h3>Đối tượng học viên</h3>
+          <p>Phù hợp với học viên chưa từng học lập trình web hoặc mới tiếp xúc ở mức cơ bản. Học viên cần biết thao tác máy tính, dùng trình duyệt, có email cá nhân và có máy tính để thực hành.</p>
+        </article>
+        <article class="text-panel">
+          <h3>Chuẩn đầu ra</h3>
+          <p>Học viên tự tạo được website tĩnh bằng HTML/CSS, biết dùng Flexbox/Grid, làm responsive, quản lý mã nguồn bằng GitHub và triển khai website qua GitHub Pages.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="process" class="section-band muted-band">
+      <div class="section-heading">
+        <p class="eyebrow">Quy trình triển khai</p>
+        <h2>Mỗi buổi thêm một lớp năng lực vào cùng một project</h2>
+      </div>
+      <div class="process-grid">
+        <article>
+          <span>01</span>
+          <h3>Khởi tạo</h3>
+          <p>Tạo project, viết HTML, xác định chủ đề website và nội dung chính.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Thiết kế giao diện</h3>
+          <p>Thêm CSS, card, hero, navbar, spacing, màu sắc và typography.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Dựng layout</h3>
+          <p>Dùng Flexbox, Grid, position và responsive để website dùng được trên nhiều màn hình.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Công bố</h3>
+          <p>Đưa code lên GitHub, viết README, deploy GitHub Pages và bảo vệ project.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="lessons" class="lessons-layout">
+      <aside class="lesson-sidebar" aria-label="Danh sách 12 buổi">
+        <div class="sidebar-header">
+          <p class="eyebrow">Lộ trình</p>
+          <h2>12 buổi học</h2>
+        </div>
+        <div class="lesson-tabs" id="lessonTabs"></div>
+      </aside>
+
+      <section class="lesson-content" aria-live="polite">
+        <div class="lesson-toolbar">
+          <div>
+            <p class="eyebrow" id="lessonKicker">Buổi 1</p>
+            <h2 id="lessonTitle"></h2>
+          </div>
+          <div class="lesson-progress">
+            <span id="lessonCount">1 / 12</span>
+            <div class="progress-track"><i id="progressFill"></i></div>
+          </div>
+        </div>
+
+        <div class="lesson-detail">
+          <article class="panel lesson-goal">
+            <h3>Mục tiêu cụ thể</h3>
+            <ul id="lessonGoals"></ul>
+          </article>
+          <article class="panel">
+            <h3>Kiến thức trọng tâm</h3>
+            <ul id="lessonTopics"></ul>
+          </article>
+          <article class="panel">
+            <h3>Hoạt động của giảng viên</h3>
+            <ul id="teacherActivities"></ul>
+          </article>
+          <article class="panel">
+            <h3>Hoạt động của học viên</h3>
+            <ul id="studentActivities"></ul>
+          </article>
+          <article class="panel product-panel">
+            <h3>Sản phẩm sau buổi học</h3>
+            <p id="lessonProduct"></p>
+          </article>
+          <article class="panel homework-panel">
+            <h3>Bài tập về nhà</h3>
+            <ul id="lessonHomework"></ul>
+          </article>
+          <article class="panel evaluation-panel">
+            <h3>Tiêu chí đánh giá</h3>
+            <ul id="lessonEvaluation"></ul>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section id="slides" class="section-band">
+      <div class="section-heading">
+        <p class="eyebrow">Slide gợi ý</p>
+        <h2>Khung slide cho từng buổi học</h2>
+        <p>Phần này dùng như dàn ý để giảng viên chuyển thành slide trình chiếu hoặc dùng trực tiếp khi dạy.</p>
+      </div>
+      <div class="slide-grid" id="slideGrid"></div>
+    </section>
+
+    <section id="exercises" class="section-band muted-band">
+      <div class="section-heading">
+        <p class="eyebrow">Bài tập thực hành</p>
+        <h2>Bài tập được gắn với tiến độ project</h2>
+        <p>Mỗi bài tập đều tạo ra một phần cụ thể của website cá nhân hoặc landing page cuối khóa.</p>
+      </div>
+      <div class="exercise-list" id="exerciseList"></div>
+    </section>
+
+    <section id="projects" class="section-band">
+      <div class="section-heading">
+        <p class="eyebrow">Dự án cuối khóa</p>
+        <h2>Đề tài gợi ý để học viên chọn và phát triển</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3>Portfolio cá nhân</h3>
+          <p>Trang giới thiệu bản thân, kỹ năng, dự án, mục tiêu học tập và thông tin liên hệ.</p>
+        </article>
+        <article class="project-card">
+          <h3>Landing page sản phẩm</h3>
+          <p>Hero, lợi ích, tính năng, bảng giá hoặc gói dịch vụ và form liên hệ.</p>
+        </article>
+        <article class="project-card">
+          <h3>Website lớp học/câu lạc bộ</h3>
+          <p>Giới thiệu, lịch hoạt động, thành viên/giảng viên, hình ảnh và form đăng ký.</p>
+        </article>
+        <article class="project-card">
+          <h3>Website quán cà phê</h3>
+          <p>Trang chủ, menu, hình ảnh, địa chỉ, liên hệ và thông tin mở cửa.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="rubric" class="rubric-section">
+      <div class="section-heading">
+        <p class="eyebrow">Rubric</p>
+        <h2>Tiêu chí đánh giá project cuối khóa</h2>
+      </div>
+      <div class="rubric-grid">
+        <article>
+          <strong>HTML</strong>
+          <span>25 điểm</span>
+          <p>Cấu trúc đầy đủ, semantic hợp lý, nội dung rõ, link/ảnh/form hiển thị đúng, code dễ đọc.</p>
+        </article>
+        <article>
+          <strong>CSS</strong>
+          <span>30 điểm</span>
+          <p>Bố cục rõ, màu sắc dễ đọc, spacing hợp lý, dùng Flexbox/Grid đúng tình huống.</p>
+        </article>
+        <article>
+          <strong>Responsive</strong>
+          <span>15 điểm</span>
+          <p>Hiển thị tốt trên desktop và mobile, không tràn ngang, ảnh và menu dễ thao tác.</p>
+        </article>
+        <article>
+          <strong>GitHub</strong>
+          <span>15 điểm</span>
+          <p>Repository đúng cấu trúc, commit rõ, README đủ thông tin và GitHub Pages hoạt động.</p>
+        </article>
+        <article>
+          <strong>Hoàn thiện</strong>
+          <span>10 điểm</span>
+          <p>Nội dung không còn dạng nháp, sản phẩm có cá nhân hóa và các phần liên kết với nhau.</p>
+        </article>
+        <article>
+          <strong>Trình bày</strong>
+          <span>5 điểm</span>
+          <p>Demo rõ ràng, giải thích được ý tưởng, cách làm và điểm muốn cải thiện.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-band checklist-section">
+      <div class="section-heading">
+        <p class="eyebrow">Checklist nộp bài</p>
+        <h2>Học viên tự kiểm tra trước khi gửi project</h2>
+      </div>
+      <div class="checklist">
+        <label><input type="checkbox"> Website mở được bằng GitHub Pages.</label>
+        <label><input type="checkbox"> Repository GitHub có thể truy cập.</label>
+        <label><input type="checkbox"> File chính tên là <code>index.html</code>.</label>
+        <label><input type="checkbox"> CSS nằm trong file riêng.</label>
+        <label><input type="checkbox"> Hình ảnh hiển thị đúng sau khi deploy.</label>
+        <label><input type="checkbox"> Mobile không bị tràn ngang.</label>
+        <label><input type="checkbox"> README có mô tả, công nghệ và link demo.</label>
+        <label><input type="checkbox"> Có ít nhất 3 commit trong lịch sử Git.</label>
+        <label><input type="checkbox"> Nội dung chính không còn văn bản mẫu.</label>
+        <label><input type="checkbox"> Đã chuẩn bị phần trình bày 3-5 phút.</label>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Biên soạn từ giáo án Markdown: HTML, CSS cơ bản đến nâng cao và GitHub.</p>
+    <a href="#home">Lên đầu trang</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
